@@ -1,0 +1,32 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Training runs per model: seeds, completeness, evaluated instances (n\_eval) and instances dropped for missing features or graphs, from the seed<k>.json sidecars. n\_eval = evaluated instances and n\_selected = instances of the setting, per model.}
+\label{tab:dq_training_R10}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllrlllrrrrrrrrrr}
+\toprule
+setting & task & model & n\_seeds & eval\_set\_sha1 & code\_sha1 & all\_complete & n\_folds\_total & n\_eval & n\_selected & dropped\_no\_features & dropped\_no\_graph & fold\_seconds\_mean & seconds\_per\_seed & epochs\_mean & threshold\_mean & val\_pr\_auc\_mean \\
+\midrule
+R10 & add\_log & naive\_prior & 5 & 5c0ceb717b450e73e89563b7842e7666839a19c8 & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 30 & 9977 & 9977 & 0 & 0 & 0.009 & 0.054 & -- & 0.090 & 0.098 \\
+R10 & add\_log & naive\_size & 5 & 5c0ceb717b450e73e89563b7842e7666839a19c8 & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 30 & 9977 & 9977 & 0 & 0 & 0.010 & 0.062 & -- & 10.500 & 0.100 \\
+R10 & add\_log & naive\_rule & 5 & 5c0ceb717b450e73e89563b7842e7666839a19c8 & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 30 & 9977 & 9977 & 0 & 0 & 0.009 & 0.052 & -- & 0.012 & 0.109 \\
+R10 & add\_log & lr & 5 & 5c0ceb717b450e73e89563b7842e7666839a19c8 & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 30 & 9977 & 9977 & 0 & 0 & 0.436 & 2.618 & -- & 0.719 & 0.277 \\
+R10 & add\_log & rf & 5 & 5c0ceb717b450e73e89563b7842e7666839a19c8 & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 30 & 9977 & 9977 & 0 & 0 & 2.533 & 15.200 & -- & 0.226 & 0.347 \\
+R10 & add\_log & hgb & 5 & 5c0ceb717b450e73e89563b7842e7666839a19c8 & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 30 & 9977 & 9977 & 0 & 0 & 4.411 & 26.464 & -- & 0.171 & 0.341 \\
+R10 & remove\_log & naive\_prior & 5 & cce83475293f643af0ecf927d0a4d6ad5d9009f8 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 35 & 7572 & 7572 & 0 & 0 & 0.007 & 0.052 & -- & 0.102 & 0.113 \\
+R10 & remove\_log & naive\_size & 5 & cce83475293f643af0ecf927d0a4d6ad5d9009f8 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 35 & 7572 & 7572 & 0 & 0 & 0.008 & 0.056 & -- & 48.143 & 0.112 \\
+R10 & remove\_log & naive\_rule & 5 & cce83475293f643af0ecf927d0a4d6ad5d9009f8 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 35 & 7572 & 7572 & 0 & 0 & 0.009 & 0.064 & -- & 0.809 & 0.123 \\
+R10 & remove\_log & lr & 5 & cce83475293f643af0ecf927d0a4d6ad5d9009f8 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 35 & 7572 & 7572 & 0 & 0 & 0.319 & 2.232 & -- & 0.547 & 0.221 \\
+R10 & remove\_log & rf & 5 & cce83475293f643af0ecf927d0a4d6ad5d9009f8 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 35 & 7572 & 7572 & 0 & 0 & 2.253 & 15.772 & -- & 0.137 & 0.222 \\
+R10 & remove\_log & hgb & 5 & cce83475293f643af0ecf927d0a4d6ad5d9009f8 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 35 & 7572 & 7572 & 0 & 0 & 2.449 & 17.140 & -- & 0.139 & 0.250 \\
+R10 & change\_level & naive\_prior & 5 & 1e61a45e89990394eb4ea983a3847b10afe08f92 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 20 & 1309 & 1309 & 0 & 0 & 0.011 & 0.046 & -- & 0.077 & 0.202 \\
+R10 & change\_level & naive\_size & 5 & 1e61a45e89990394eb4ea983a3847b10afe08f92 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 20 & 1309 & 1309 & 0 & 0 & 0.010 & 0.038 & -- & 4.250 & 0.115 \\
+R10 & change\_level & naive\_rule & 5 & 1e61a45e89990394eb4ea983a3847b10afe08f92 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 20 & 1309 & 1309 & 0 & 0 & 0.008 & 0.032 & -- & 1.200 & 0.272 \\
+R10 & change\_level & lr & 5 & 1e61a45e89990394eb4ea983a3847b10afe08f92 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 20 & 1309 & 1309 & 0 & 0 & 0.079 & 0.316 & -- & 0.238 & 0.222 \\
+R10 & change\_level & rf & 5 & 1e61a45e89990394eb4ea983a3847b10afe08f92 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 20 & 1309 & 1309 & 0 & 0 & 1.506 & 6.022 & -- & 0.081 & 0.299 \\
+R10 & change\_level & hgb & 5 & 1e61a45e89990394eb4ea983a3847b10afe08f92 & bced518ae228914cefe00b69fe8067d3737d98c7 & yes & 20 & 1309 & 1309 & 0 & 0 & 0.535 & 2.140 & -- & 0.075 & 0.272 \\
+\bottomrule
+\end{tabular}}
+\end{table}

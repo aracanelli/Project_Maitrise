@@ -1,0 +1,17 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{SENSITIVITY (commit-time ADD\_LOG view, not primary). Pairwise model comparisons (A - B; pooled and macro over test repositories; macro resamples need a positive in every repository); Holm within task per metric; Wilcoxon over test repositories; Cliff's delta over (repository, seed) values. Setting R4, leave-one-repository-out. n = instances in the row, n\_pos = positives; mean $\pm$ sd over seeds; 95\% CI: commit-cluster bootstrap within repositories (B=1000) of the seed mean; paired tests on B=10000 resamples.}
+\label{tab:sens_add_log_post_pairwise}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllrrrrlrrrrrrrrrrrrrrrrrr}
+\toprule
+task & model\_a & model\_b & n & n\_pos & pr\_auc\_wilcoxon\_p & pr\_auc\_cliffs\_delta & pr\_auc\_cliffs\_magnitude & $\Delta$ PR-AUC & $\Delta$ PR-AUC 95\% CI & p PR-AUC & MC SE p PR-AUC & B used PR-AUC & p Holm PR-AUC & $\Delta$ macro PR-AUC & $\Delta$ macro PR-AUC 95\% CI & p macro PR-AUC & MC SE p macro PR-AUC & B used macro PR-AUC & p Holm macro PR-AUC & $\Delta$ F1 & $\Delta$ F1 95\% CI & p F1 & MC SE p F1 & B used F1 & p Holm F1 \\
+\midrule
+add\_log\_post & hybrid\_ggnn & hgb & 4475 & 895 & 0.062 & -0.489 & large & -0.096 & [-0.128, -0.066] & $<$0.001 & 0.0002 & 10000 & $<$0.001 & -0.075 & [-0.112, -0.032] & $<$0.001 & 0.0003 & 10000 & 0.001 & -0.044 & [-0.069, -0.018] & $<$0.001 & 0.0003 & 10000 & $<$0.001 \\
+add\_log\_post & gnn\_ggnn & hgb & 4475 & 895 & 0.031 & -0.467 & medium & -0.114 & [-0.147, -0.082] & $<$0.001 & 0.0002 & 10000 & $<$0.001 & -0.088 & [-0.135, -0.031] & 0.002 & 0.0006 & 10000 & 0.002 & -0.034 & [-0.063, -0.008] & 0.008 & 0.0013 & 10000 & 0.008 \\
+add\_log\_post & hybrid\_ggnn & naive\_rule & 4475 & 895 & 0.031 & 0.600 & large & +0.057 & [+0.034, +0.080] & $<$0.001 & 0.0002 & 10000 & $<$0.001 & +0.078 & [+0.033, +0.118] & $<$0.001 & 0.0003 & 10000 & 0.001 & +0.063 & [+0.035, +0.088] & $<$0.001 & 0.0002 & 10000 & $<$0.001 \\
+\bottomrule
+\end{tabular}}
+\end{table}

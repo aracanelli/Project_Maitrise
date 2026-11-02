@@ -1,0 +1,19 @@
+setting,task,model,negative_sampling,class_weighting,pos_weight_mean,threshold_rule,threshold_mean,threshold_min,threshold_max
+R10,add_log,naive_prior,"10 negatives per positive per repository (seeded, nested)",none (no training),,score < threshold (training prevalence),0.09048359823184098,0.09003601440576231,0.09088390135771682
+R10,add_log,naive_size,"10 negatives per positive per repository (seeded, nested)",none (no training),,score >= threshold (F1-max on validation),10.5,2.0,21.0
+R10,add_log,naive_rule,"10 negatives per positive per repository (seeded, nested)",none (no training),,score >= threshold (F1-max on validation),0.011500000000000003,0.002,0.021
+R10,add_log,lr,"10 negatives per positive per repository (seeded, nested)",class_weight=balanced,,score >= threshold (F1-max on validation),0.7191685712322882,0.6122131765203788,0.8383301450812759
+R10,add_log,rf,"10 negatives per positive per repository (seeded, nested)",class_weight=balanced_subsample,,score >= threshold (F1-max on validation),0.22604100311760578,0.12948275864987527,0.3180185455575666
+R10,add_log,hgb,"10 negatives per positive per repository (seeded, nested)",none (unweighted loss),,score >= threshold (F1-max on validation),0.17111089691657172,0.11969194660770284,0.2889929662126933
+R10,remove_log,naive_prior,"10 negatives per positive per repository (seeded, nested)",none (no training),,score < threshold (training prevalence),0.1017065633482779,0.09841717599122395,0.11045655375552282
+R10,remove_log,naive_size,"10 negatives per positive per repository (seeded, nested)",none (no training),,score >= threshold (F1-max on validation),48.142857142857146,3.0,245.0
+R10,remove_log,naive_rule,"10 negatives per positive per repository (seeded, nested)",none (no training),,score >= threshold (F1-max on validation),0.809,0.003,3.018
+R10,remove_log,lr,"10 negatives per positive per repository (seeded, nested)",class_weight=balanced,,score >= threshold (F1-max on validation),0.5474076954960403,0.04775634569341169,0.8375213960327007
+R10,remove_log,rf,"10 negatives per positive per repository (seeded, nested)",class_weight=balanced_subsample,,score >= threshold (F1-max on validation),0.13741281351656423,0.07977728319062015,0.2377746256135046
+R10,remove_log,hgb,"10 negatives per positive per repository (seeded, nested)",none (unweighted loss),,score >= threshold (F1-max on validation),0.1389679211679221,0.07980991012459877,0.23530476395484332
+R10,change_level,naive_prior,"10 negatives per positive per repository (seeded, nested)",none (no training),,score < threshold (training prevalence),0.07687443619749168,0.05874840357598978,0.0906832298136646
+R10,change_level,naive_size,"10 negatives per positive per repository (seeded, nested)",none (no training),,score >= threshold (F1-max on validation),4.25,4.0,5.0
+R10,change_level,naive_rule,"10 negatives per positive per repository (seeded, nested)",none (no training),,score >= threshold (F1-max on validation),1.199561403508772,0.0,3.166666666666667
+R10,change_level,lr,"10 negatives per positive per repository (seeded, nested)",class_weight=balanced,,score >= threshold (F1-max on validation),0.23771859712309046,7.533573920674802e-09,0.8841318914776357
+R10,change_level,rf,"10 negatives per positive per repository (seeded, nested)",class_weight=balanced_subsample,,score >= threshold (F1-max on validation),0.0813201380871755,0.01992266793003928,0.2313482410273942
+R10,change_level,hgb,"10 negatives per positive per repository (seeded, nested)",none (unweighted loss),,score >= threshold (F1-max on validation),0.07457286712269645,0.03643035545556832,0.11683322512625668

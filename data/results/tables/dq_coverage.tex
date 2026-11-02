@@ -1,0 +1,50 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Prediction coverage per model (n\_evaluated of n\_union predicted instances). n\_union = instances predicted by any model, n\_evaluated = instances scored for the model.}
+\label{tab:dq_coverage}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllrrrrrrl}
+\toprule
+setting & task & model & n\_seeds & seeds & n\_union & n\_evaluated & partial & eval\_set\_mismatch & eval\_set\_sha1 \\
+\midrule
+R4 & add\_log & naive\_prior & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & naive\_size & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & naive\_rule & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & lr & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & rf & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & hgb & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & mlp\_hist & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & mlp\_full & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & gnn\_rgcn & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & gnn\_ggnn & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & hybrid\_ggnn\_nohist & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & add\_log & hybrid\_ggnn & 5 & 0,1,2,3,4 & 4475 & 4475 &  &  & 8721ef328e59493d588fef99e954b0108860a75a \\
+R4 & remove\_log & naive\_prior & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & naive\_size & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & naive\_rule & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & lr & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & rf & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & hgb & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & mlp\_hist & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & mlp\_full & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & gnn\_rgcn & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & gnn\_ggnn & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & hybrid\_ggnn\_nohist & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & remove\_log & hybrid\_ggnn & 5 & 0,1,2,3,4 & 3766 & 3766 &  &  & 00aa19cf5a9db5d2ecd825012e203c6649299b26 \\
+R4 & change\_level & naive\_prior & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & naive\_size & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & naive\_rule & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & lr & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & rf & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & hgb & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & mlp\_hist & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & mlp\_full & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & gnn\_rgcn & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & gnn\_ggnn & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & hybrid\_ggnn\_nohist & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+R4 & change\_level & hybrid\_ggnn & 5 & 0,1,2,3,4 & 585 & 585 &  &  & dad6426d734baba08abb08bd95863f8233c5ef8c \\
+\bottomrule
+\end{tabular}}
+\end{table}

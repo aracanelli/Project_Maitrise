@@ -1,0 +1,31 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{LORO folds: training repositories, fit/validation/test sizes and positives (prediction sidecars) and the commit support of the test positives (few\_commit\_fold). n = 18698 test instances over 17 folds.}
+\label{tab:dq_folds_R10}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllrrrrrrrrlrrrlll}
+\toprule
+setting & task & test\_repo & training\_repos & n\_training\_repos & n\_fit & n\_fit\_pos & n\_val & n\_val\_pos & n\_test & n\_test\_pos & val\_seed & low\_support & n\_pos\_all & n\_pos\_commits & max\_commit\_share & few\_commit\_fold & commit\_support\_source & evaluated \\
+\midrule
+R10 & add\_log & OpenKeeper & Archer-Game-Template2;Mindustry;OpenRTS;SkyHussars;jme3rpg;riiablo;shattered-pixel-dungeon;subspace-infinity & 8 & 7218 & 656 & 1274 & 116 & 1485 & 135 & 42 &  & 135 & 88 & 0.141 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & add\_log & Mindustry & Archer-Game-Template2;OpenKeeper;OpenRTS;SkyHussars;jme3rpg;riiablo;shattered-pixel-dungeon;subspace-infinity & 8 & 4654 & 420 & 824 & 78 & 4499 & 409 & 43 &  & 409 & 338 & 0.015 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & add\_log & subspace-infinity & Archer-Game-Template2;Mindustry;OpenKeeper;OpenRTS;SkyHussars;jme3rpg;riiablo;shattered-pixel-dungeon & 8 & 7637 & 694 & 1350 & 123 & 990 & 90 & 44 &  & 90 & 49 & 0.089 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & add\_log & riiablo & Archer-Game-Template2;Mindustry;OpenKeeper;OpenRTS;SkyHussars;jme3rpg;shattered-pixel-dungeon;subspace-infinity & 8 & 6741 & 607 & 1190 & 114 & 2046 & 186 & 45 &  & 186 & 121 & 0.048 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & add\_log & OpenRTS & Archer-Game-Template2;Mindustry;OpenKeeper;SkyHussars;jme3rpg;riiablo;shattered-pixel-dungeon;subspace-infinity & 8 & 7928 & 720 & 1400 & 128 & 649 & 59 & 46 &  & 59 & 41 & 0.085 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & add\_log & SkyHussars & Archer-Game-Template2;Mindustry;OpenKeeper;OpenRTS;jme3rpg;riiablo;shattered-pixel-dungeon;subspace-infinity & 8 & 8330 & 750 & 1471 & 141 & 176 & 16 & 47 & yes & 16 & 14 & 0.125 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & remove\_log & OpenKeeper & Mindustry;OpenRTS;SkyHussars;jme3rpg;riiablo;shattered-pixel-dungeon;subspace-infinity & 7 & 6040 & 617 & 1081 & 109 & 451 & 41 & 42 &  & 41 & 27 & 0.098 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & remove\_log & Mindustry & OpenKeeper;OpenRTS;SkyHussars;jme3rpg;riiablo;shattered-pixel-dungeon;subspace-infinity & 7 & 3395 & 375 & 602 & 67 & 3575 & 325 & 43 &  & 325 & 229 & 0.040 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & remove\_log & subspace-infinity & Mindustry;OpenKeeper;OpenRTS;SkyHussars;jme3rpg;riiablo;shattered-pixel-dungeon & 7 & 5810 & 574 & 1028 & 102 & 734 & 91 & 44 &  & 91 & 39 & 0.099 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & remove\_log & riiablo & Mindustry;OpenKeeper;OpenRTS;SkyHussars;jme3rpg;shattered-pixel-dungeon;subspace-infinity & 7 & 4930 & 515 & 871 & 91 & 1771 & 161 & 45 &  & 161 & 40 & 0.180 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & remove\_log & OpenRTS & Mindustry;OpenKeeper;SkyHussars;jme3rpg;riiablo;shattered-pixel-dungeon;subspace-infinity & 7 & 5697 & 565 & 1006 & 100 & 869 & 102 & 46 &  & 102 & 39 & 0.255 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & remove\_log & SkyHussars & Mindustry;OpenKeeper;OpenRTS;jme3rpg;riiablo;shattered-pixel-dungeon;subspace-infinity & 7 & 6346 & 625 & 1121 & 113 & 105 & 29 & 47 & yes & 29 & 16 & 0.207 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & remove\_log & jme3rpg & Mindustry;OpenKeeper;OpenRTS;SkyHussars;riiablo;shattered-pixel-dungeon;subspace-infinity & 7 & 6381 & 628 & 1130 & 124 & 61 & 15 & 48 & yes & 15 & 5 & 0.667 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & change\_level & OpenKeeper & Mindustry;OpenRTS;SkyHussars;riiablo;subspace-infinity & 5 & 850 & 77 & 151 & 14 & 308 & 28 & 42 & yes & 28 & 2 & 0.964 & yes & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & change\_level & Mindustry & OpenKeeper;OpenRTS;SkyHussars;riiablo;subspace-infinity & 5 & 805 & 73 & 152 & 14 & 352 & 32 & 43 &  & 32 & 14 & 0.281 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & change\_level & subspace-infinity & Mindustry;OpenKeeper;OpenRTS;SkyHussars;riiablo & 5 & 904 & 61 & 163 & 36 & 242 & 22 & 44 & yes & 22 & 9 & 0.364 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+R10 & change\_level & riiablo & Mindustry;OpenKeeper;OpenRTS;SkyHussars;subspace-infinity & 5 & 783 & 46 & 141 & 38 & 385 & 35 & 45 &  & 35 & 12 & 0.429 &  & folds.json (dataset stage: positives from at most 2 commits) & yes \\
+\bottomrule
+\end{tabular}}
+\end{table}

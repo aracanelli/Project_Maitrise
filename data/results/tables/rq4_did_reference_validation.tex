@@ -1,0 +1,22 @@
+% requires \usepackage{booktabs}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Mean validation PR-AUC (over folds and seeds, from the sidecars) of the classical models; selected = reference of the RQ4 sensitivity check. n\_val\_folds = validation values (folds x seeds) averaged per row.}
+\label{tab:rq4_did_reference_validation}
+\begin{tabular}{lllrrl}
+\toprule
+setting & task & model & val\_pr\_auc\_mean & n\_val\_folds & selected \\
+\midrule
+R4 & add\_log & lr & 0.484 & 30 &  \\
+R4 & add\_log & rf & 0.519 & 30 &  \\
+R4 & add\_log & hgb & 0.526 & 30 & yes \\
+R4 & remove\_log & lr & 0.349 & 35 &  \\
+R4 & remove\_log & rf & 0.366 & 35 &  \\
+R4 & remove\_log & hgb & 0.384 & 35 & yes \\
+R4 & change\_level & lr & 0.375 & 20 &  \\
+R4 & change\_level & rf & 0.380 & 20 & yes \\
+R4 & change\_level & hgb & 0.340 & 20 &  \\
+\bottomrule
+\end{tabular}
+\end{table}

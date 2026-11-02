@@ -1,0 +1,19 @@
+# Static indicators of performance-sensitive game code (report section 4.11, Appendix V).
+# Matching is on lowercase camelCase/snake_case subtokens, never on raw substrings.
+
+frame_method_tokens: [update, tick, step, draw, render, refresh, animate, simulate, act, frame]
+frame_param_names: [tpf, delta, deltatime, dt]
+
+subsystems:
+  input: [input, key, keyboard, mouse, touch, controller, gamepad, joystick, gesture, cursor, click, press]
+  network: [net, network, packet, socket, server, client, sync, rpc, http, connection, remote, multiplayer, lobby]
+  physics: [physics, body, force, velocity, gravity, rigid, rigidbody, bullet, impulse, kinematic]
+  collision: [collision, collide, collides, overlap, contact, hit, intersect, intersects, bounds, raycast]
+  animation: [anim, animation, animate, tween, sprite, skeleton, particle, effect]
+  resource: [load, loader, loading, asset, assets, resource, resources, texture, sound, music, atlas, font, shader, cache]
+
+# name sources scanned for subsystem markers
+subsystem_sources: [method_name, class_path, file_path]
+
+# context category priority (mutually exclusive)
+category_priority: [frame_update, loop, subsystem, general]

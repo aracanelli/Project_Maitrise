@@ -1,0 +1,42 @@
+**Training runs per model: seeds, completeness, evaluated instances (n_eval) and instances dropped for missing features or graphs, from the seed<k>.json sidecars. n_eval = evaluated instances and n_selected = instances of the setting, per model.**
+
+| setting | task | model | n_seeds | eval_set_sha1 | code_sha1 | all_complete | n_folds_total | n_eval | n_selected | dropped_no_features | dropped_no_graph | fold_seconds_mean | seconds_per_seed | epochs_mean | threshold_mean | val_pr_auc_mean |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| R4 | add_log | naive_prior | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 0.009 | 0.054 | – | 0.199 | 0.208 |
+| R4 | add_log | naive_size | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 0.009 | 0.054 | – | 12.833 | 0.243 |
+| R4 | add_log | naive_rule | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 0.008 | 0.050 | – | 0.013 | 0.267 |
+| R4 | add_log | lr | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 0.214 | 1.282 | – | 0.666 | 0.484 |
+| R4 | add_log | rf | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 1.446 | 8.674 | – | 0.303 | 0.519 |
+| R4 | add_log | hgb | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 1.541 | 9.244 | – | 0.223 | 0.526 |
+| R4 | add_log | mlp_hist | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 3.453 | 20.716 | 19.000 | 0.610 | 0.530 |
+| R4 | add_log | mlp_full | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 2.415 | 14.488 | 11.267 | 0.617 | 0.548 |
+| R4 | add_log | gnn_rgcn | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 751.894 | 4511.364 | 15.433 | 0.568 | 0.523 |
+| R4 | add_log | gnn_ggnn | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 3113.322 | 18679.932 | 12.200 | 0.562 | 0.509 |
+| R4 | add_log | hybrid_ggnn_nohist | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 3080.490 | 18482.938 | 11.433 | 0.563 | 0.548 |
+| R4 | add_log | hybrid_ggnn | 5 | 8721ef328e59493d588fef99e954b0108860a75a | 17cda31f1809a54e15f9a3e050d65546232234f6 | yes | 30 | 4535 | 4535 | 0 | 0 | 3352.714 | 20116.286 | 11.467 | 0.614 | 0.546 |
+| R4 | remove_log | naive_prior | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 0.008 | 0.056 | – | 0.201 | 0.221 |
+| R4 | remove_log | naive_size | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 0.007 | 0.046 | – | 6.714 | 0.215 |
+| R4 | remove_log | naive_rule | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 0.009 | 0.060 | – | 0.455 | 0.289 |
+| R4 | remove_log | lr | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 0.145 | 1.014 | – | 0.224 | 0.349 |
+| R4 | remove_log | rf | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 1.263 | 8.842 | – | 0.224 | 0.366 |
+| R4 | remove_log | hgb | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 0.848 | 5.938 | – | 0.175 | 0.384 |
+| R4 | remove_log | mlp_hist | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 1.971 | 13.800 | 21.914 | 0.513 | 0.401 |
+| R4 | remove_log | mlp_full | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 1.146 | 8.022 | 15.571 | 0.494 | 0.430 |
+| R4 | remove_log | gnn_rgcn | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 273.350 | 1913.452 | 18.457 | 0.458 | 0.406 |
+| R4 | remove_log | gnn_ggnn | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 5975.007 | 41825.048 | 17.057 | 0.509 | 0.400 |
+| R4 | remove_log | hybrid_ggnn_nohist | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 772.525 | 5407.674 | 16.171 | 0.453 | 0.419 |
+| R4 | remove_log | hybrid_ggnn | 5 | 00aa19cf5a9db5d2ecd825012e203c6649299b26 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 3772 | 3772 | 0 | 0 | 13488.029 | 94416.202 | 17.114 | 0.484 | 0.429 |
+| R4 | change_level | naive_prior | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 0.002 | 0.008 | – | 0.198 | 0.277 |
+| R4 | change_level | naive_size | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 0.005 | 0.020 | – | 6.000 | 0.168 |
+| R4 | change_level | naive_rule | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 0.004 | 0.014 | – | 1.163 | 0.395 |
+| R4 | change_level | lr | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 0.029 | 0.116 | – | 0.006 | 0.375 |
+| R4 | change_level | rf | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 0.712 | 2.850 | – | 0.131 | 0.380 |
+| R4 | change_level | hgb | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 0.180 | 0.722 | – | 0.127 | 0.340 |
+| R4 | change_level | mlp_hist | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 0.329 | 1.316 | 28.250 | 0.351 | 0.444 |
+| R4 | change_level | mlp_full | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 0.237 | 0.946 | 16.750 | 0.326 | 0.433 |
+| R4 | change_level | gnn_rgcn | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 4.149 | 16.594 | 18.900 | 0.316 | 0.453 |
+| R4 | change_level | gnn_ggnn | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 10.939 | 43.754 | 15.150 | 0.427 | 0.498 |
+| R4 | change_level | hybrid_ggnn_nohist | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 166.584 | 666.336 | 15.050 | 0.410 | 0.525 |
+| R4 | change_level | hybrid_ggnn | 5 | dad6426d734baba08abb08bd95863f8233c5ef8c | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 20 | 595 | 595 | 0 | 0 | 110.157 | 440.628 | 17.350 | 0.272 | 0.538 |
+| R4 | multiclass | hgb_multiclass | 5 | 4cc3eb16425fec4ce7e09afe38b6c06a45c73840 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 7185 | 7185 | 0 | 0 | – | – | – | – | – |
+| R4 | multiclass | lr_multiclass | 5 | 4cc3eb16425fec4ce7e09afe38b6c06a45c73840 | bced518ae228914cefe00b69fe8067d3737d98c7 | yes | 35 | 7185 | 7185 | 0 | 0 | – | – | – | – | – |

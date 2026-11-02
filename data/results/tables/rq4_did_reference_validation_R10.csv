@@ -1,0 +1,10 @@
+setting,task,model,val_pr_auc_mean,n_val_folds,selected
+R10,add_log,lr,0.27692534926324514,30,False
+R10,add_log,rf,0.34667969030952633,30,True
+R10,add_log,hgb,0.34126049240259776,30,False
+R10,remove_log,lr,0.22135263060796773,35,False
+R10,remove_log,rf,0.22241962166551588,35,False
+R10,remove_log,hgb,0.25017671670342323,35,True
+R10,change_level,lr,0.2223944961639523,20,False
+R10,change_level,rf,0.29906298910716844,20,True
+R10,change_level,hgb,0.2716095923601382,20,False

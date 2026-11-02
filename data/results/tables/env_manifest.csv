@@ -1,0 +1,34 @@
+item,value
+generated,2026-10-05T19:08:05-04:00
+python,3.10.6
+platform,Windows-10-10.0.26200-SP0
+package torch,2.6.0+cu124
+package torch_geometric,2.8.0.post1
+package scikit-learn,1.7.2
+package numpy,2.2.6
+package scipy,1.15.3
+package pandas,2.3.3
+package lxml,6.1.3
+package GitPython,3.2.0
+package matplotlib,3.10.9
+package PyYAML,6.0.3
+package Levenshtein,0.27.4
+package threadpoolctl,3.7.0
+srcml,srcml: 1.1.0
+git,git version 2.45.2.windows.1
+cuda device_name,NVIDIA GeForce RTX 4060 Laptop GPU
+cuda torch_cuda,12.4
+cuda cudnn,90100
+cuda available,True
+seeds sampling,42
+seeds training,"0, 1, 2, 3, 4"
+seeds bootstrap,42
+seeds bootstrap_samples,1000
+hardware cpu,Intel(R) Core(TM) Ultra 9 185H
+hardware logical_cores,22
+hardware ram_gb,15.4
+evaluation bootstrap_samples,1000
+evaluation bootstrap_samples_tests,10000
+evaluation bootstrap_seed,42
+pinned repositories,16
+hashed source files,86

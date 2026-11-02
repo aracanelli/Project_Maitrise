@@ -1,0 +1,15 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{SENSITIVITY (commit-time ADD\_LOG view, not primary). RQ4 difference-in-differences: (hybrid\_ggnn - hgb) on the subset minus on the complement; hgb fixed a priori; Holm over tasks per metric; PR-AUC is the primary test, F1 of low-support parts is exploratory. Parts with < 10 positives or positives from at most 2 commits are descriptive only (no p, not in the Holm family); B used = resamples with the positives the value needs. Setting R4, leave-one-repository-out. n = instances in the row, n\_pos = positives; mean $\pm$ sd over seeds; 95\% CI: commit-cluster bootstrap within repositories (B=1000) of the seed mean; paired tests on B=10000 resamples.}
+\label{tab:sens_add_log_post_did}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr}
+\toprule
+task & model\_a & model\_b & n\_subset & n\_pos\_subset & n\_pos\_commits\_subset & n\_complement & n\_pos\_complement & n\_pos\_commits\_complement & low\_support\_subset & low\_support\_complement & f1\_exploratory & descriptive\_only & $\Delta$ PR-AUC subset & $\Delta$ PR-AUC subset 95\% CI & p PR-AUC subset & MC SE p PR-AUC subset & B used PR-AUC subset & $\Delta$ PR-AUC complement & $\Delta$ PR-AUC complement 95\% CI & p PR-AUC complement & MC SE p PR-AUC complement & B used PR-AUC complement & $\Delta$ PR-AUC DiD & $\Delta$ PR-AUC DiD 95\% CI & p PR-AUC DiD & MC SE p PR-AUC DiD & B used PR-AUC DiD & p Holm PR-AUC DiD & $\Delta$ F1 subset & $\Delta$ F1 subset 95\% CI & p F1 subset & MC SE p F1 subset & B used F1 subset & $\Delta$ F1 complement & $\Delta$ F1 complement 95\% CI & p F1 complement & MC SE p F1 complement & B used F1 complement & $\Delta$ F1 DiD & $\Delta$ F1 DiD 95\% CI & p F1 DiD & MC SE p F1 DiD & B used F1 DiD & p Holm F1 DiD \\
+\midrule
+add\_log\_post & hybrid\_ggnn & hgb & 2952 & 673 & 509 & 1523 & 222 & 178 &  &  &  &  & -0.091 & [-0.125, -0.059] & $<$0.001 & 0.0002 & 10000 & -0.117 & [-0.182, -0.054] & $<$0.001 & 0.0002 & 10000 & +0.026 & [-0.044, +0.095] & 0.496 & 0.0086 & 10000 & 0.496 & -0.027 & [-0.054, -0.001] & 0.046 & 0.0030 & 10000 & -0.113 & [-0.170, -0.058] & $<$0.001 & 0.0002 & 10000 & +0.087 & [+0.027, +0.147] & 0.004 & 0.0009 & 10000 & 0.004 \\
+\bottomrule
+\end{tabular}}
+\end{table}

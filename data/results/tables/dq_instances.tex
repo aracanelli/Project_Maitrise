@@ -1,0 +1,37 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Instances per task and repository (positives; negatives in the pool and in R1/R4/R10). n = 1793 positives and 118075 pooled negatives over 23 task-repository rows.}
+\label{tab:dq_instances}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrrllr}
+\toprule
+task & repo & n\_pos & n\_neg\_pool & n\_neg\_written & n\_neg\_R1 & n\_neg\_R4 & n\_neg\_R10 & fold\_role & low\_support & excluded\_n\_pos \\
+\midrule
+add\_log & Archer-Game-Template2 & 4 & 477 & 40 & 4 & 16 & 40 & train\_only &  & 4.000 \\
+add\_log & Mindustry & 409 & 45825 & 4090 & 409 & 1636 & 4090 & test &  & -- \\
+add\_log & OpenKeeper & 135 & 7765 & 1350 & 135 & 540 & 1350 & test &  & -- \\
+add\_log & OpenRTS & 59 & 3156 & 590 & 59 & 236 & 590 & test &  & -- \\
+add\_log & SkyHussars & 16 & 1039 & 160 & 16 & 64 & 160 & test & yes & -- \\
+add\_log & jme3rpg & 7 & 1077 & 70 & 7 & 28 & 70 & train\_only &  & 7.000 \\
+add\_log & riiablo & 186 & 3893 & 1860 & 186 & 744 & 1860 & test &  & -- \\
+add\_log & shattered-pixel-dungeon & 1 & 23822 & 10 & 1 & 4 & 10 & train\_only &  & 1.000 \\
+add\_log & subspace-infinity & 90 & 3018 & 900 & 90 & 360 & 900 & test &  & -- \\
+remove\_log & Mindustry & 325 & 6885 & 3250 & 325 & 1300 & 3250 & test &  & -- \\
+remove\_log & OpenKeeper & 41 & 2502 & 410 & 41 & 164 & 410 & test &  & -- \\
+remove\_log & OpenRTS & 102 & 767 & 767 & 102 & 408 & 767 & test &  & -- \\
+remove\_log & SkyHussars & 29 & 76 & 76 & 29 & 76 & 76 & test & yes & -- \\
+remove\_log & jme3rpg & 15 & 46 & 46 & 15 & 46 & 46 & test & yes & -- \\
+remove\_log & riiablo & 161 & 3212 & 1610 & 161 & 644 & 1610 & test &  & -- \\
+remove\_log & shattered-pixel-dungeon & 3 & 3 & 3 & 3 & 3 & 3 & train\_only &  & 3.000 \\
+remove\_log & subspace-infinity & 91 & 643 & 643 & 91 & 364 & 643 & test &  & -- \\
+change\_level & Mindustry & 32 & 6767 & 320 & 32 & 128 & 320 & test &  & -- \\
+change\_level & OpenKeeper & 28 & 2463 & 280 & 28 & 112 & 280 & test & yes & -- \\
+change\_level & OpenRTS & 1 & 766 & 10 & 1 & 4 & 10 & train\_only &  & 1.000 \\
+change\_level & SkyHussars & 1 & 75 & 10 & 1 & 4 & 10 & train\_only &  & 1.000 \\
+change\_level & riiablo & 35 & 3177 & 350 & 35 & 140 & 350 & test &  & -- \\
+change\_level & subspace-infinity & 22 & 621 & 220 & 22 & 88 & 220 & test & yes & -- \\
+\bottomrule
+\end{tabular}}
+\end{table}

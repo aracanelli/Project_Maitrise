@@ -1,0 +1,17 @@
+repo,modeling,n_java_files,n_parse_failures,n_files_misparsed,n_units_no_class,n_method_units,n_formal,n_logs_outside_units,pct_files_misparsed,n_statements_outside_units_misparse,n_formal_outside_units_misparse
+OpenKeeper,True,698,0,5,13,6993,358,0,0.7163323782234957,0,0
+Mindustry,True,809,0,81,1108,8913,306,112,10.012360939431396,107,102
+shattered-pixel-dungeon,True,1289,0,4,10,10416,2,0,0.3103180760279286,0,0
+subspace-infinity,True,310,0,0,0,2003,275,0,0.0,0,0
+riiablo,True,862,0,3,35,6531,1462,7,0.3480278422273782,5,5
+OpenRTS,True,236,0,1,6,1874,93,1,0.423728813559322,1,0
+SkyHussars,True,134,0,1,1,675,19,0,0.746268656716418,0,0
+Archer-Game-Template2,True,78,0,0,0,565,27,0,0.0,0,0
+jme3rpg,True,126,0,0,0,786,20,1,0.0,0,0
+FXGLGames,False,268,0,9,43,1050,0,0,3.3582089552238807,0,0
+ToadallyArmed,False,104,0,1,1,324,81,0,0.9615384615384616,0,0
+FuzeCreek,False,21,0,0,0,104,0,0,0.0,0,0
+monkeyzone,False,74,0,0,0,627,60,0,0.0,0,0
+BrickBreakerNew,False,21,0,1,0,88,0,0,4.761904761904762,0,0
+pass-to-survive,False,27,0,0,0,151,0,0,0.0,0,0
+TheLastGarage,False,16,0,0,0,125,14,0,0.0,0,0

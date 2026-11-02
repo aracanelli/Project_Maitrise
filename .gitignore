@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# Data artifacts
+artifacts/
+outputs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log
+data/raw/
+data/interim/
+data/processed/
+data/results/predictions/
+data/results/importance/
+data/results/logs/
+data/results/error_analysis/
+data/results/rq1/

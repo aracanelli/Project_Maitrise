@@ -1,0 +1,17 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{RQ4 sensitivity: difference-in-differences against the classical model with the highest validation PR-AUC (model\_b); Holm over tasks per metric. Parts with < 10 positives or positives from at most 2 commits are descriptive only (no p, not in the Holm family); B used = resamples with the positives the value needs. Setting R4, leave-one-repository-out. n = instances in the row, n\_pos = positives; mean $\pm$ sd over seeds; 95\% CI: commit-cluster bootstrap within repositories (B=1000) of the seed mean; paired tests on B=10000 resamples.}
+\label{tab:rq4_did_bestval}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllrrrrrrrllrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr}
+\toprule
+task & model\_a & model\_b & n\_subset & n\_pos\_subset & n\_pos\_commits\_subset & n\_complement & n\_pos\_complement & n\_pos\_commits\_complement & low\_support\_subset & low\_support\_complement & f1\_exploratory & descriptive\_only & $\Delta$ PR-AUC subset & $\Delta$ PR-AUC subset 95\% CI & p PR-AUC subset & MC SE p PR-AUC subset & B used PR-AUC subset & $\Delta$ PR-AUC complement & $\Delta$ PR-AUC complement 95\% CI & p PR-AUC complement & MC SE p PR-AUC complement & B used PR-AUC complement & $\Delta$ PR-AUC DiD & $\Delta$ PR-AUC DiD 95\% CI & p PR-AUC DiD & MC SE p PR-AUC DiD & B used PR-AUC DiD & p Holm PR-AUC DiD & $\Delta$ F1 subset & $\Delta$ F1 subset 95\% CI & p F1 subset & MC SE p F1 subset & B used F1 subset & $\Delta$ F1 complement & $\Delta$ F1 complement 95\% CI & p F1 complement & MC SE p F1 complement & B used F1 complement & $\Delta$ F1 DiD & $\Delta$ F1 DiD 95\% CI & p F1 DiD & MC SE p F1 DiD & B used F1 DiD & p Holm F1 DiD \\
+\midrule
+add\_log & hybrid\_ggnn & hgb & 2952 & 673 & 509 & 1523 & 222 & 178 &  &  &  &  & -0.071 & [-0.101, -0.044] & $<$0.001 & 0.0002 & 10000 & -0.087 & [-0.137, -0.042] & $<$0.001 & 0.0002 & 10000 & +0.016 & [-0.039, +0.072] & 0.567 & 0.0090 & 10000 & 1.000 & -0.009 & [-0.037, +0.018] & 0.509 & 0.0087 & 10000 & -0.064 & [-0.115, -0.012] & 0.015 & 0.0017 & 10000 & +0.055 & [-0.001, +0.110] & 0.055 & 0.0033 & 10000 & 0.118 \\
+remove\_log & hybrid\_ggnn & hgb & 3213 & 634 & 322 & 553 & 130 & 87 &  &  &  &  & +0.007 & [-0.047, +0.065] & 0.825 & 0.0098 & 10000 & -0.035 & [-0.107, +0.041] & 0.337 & 0.0075 & 10000 & +0.042 & [-0.052, +0.135] & 0.366 & 0.0077 & 10000 & 1.000 & +0.011 & [-0.032, +0.053] & 0.637 & 0.0093 & 10000 & -0.044 & [-0.082, -0.006] & 0.022 & 0.0021 & 10000 & +0.055 & [-0.003, +0.111] & 0.063 & 0.0035 & 10000 & 0.118 \\
+change\_level & hybrid\_ggnn & rf & 499 & 100 & 32 & 86 & 17 & 9 &  & yes & yes &  & -0.011 & [-0.094, +0.066] & 0.799 & 0.0098 & 10000 & +0.069 & [-0.186, +0.220] & 0.541 & 0.0089 & 9999 & -0.080 & [-0.250, +0.181] & 0.512 & 0.0087 & 9999 & 1.000 & -0.027 & [-0.138, +0.067] & 0.588 & 0.0091 & 10000 & +0.179 & [+0.010, +0.290] & 0.038 & 0.0027 & 9999 & -0.206 & [-0.358, -0.014] & 0.039 & 0.0028 & 9999 & 0.118 \\
+\bottomrule
+\end{tabular}}
+\end{table}

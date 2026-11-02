@@ -1,0 +1,4 @@
+setting,model,n,n_seeds,macro_f1_mean,macro_f1_sd,balanced_accuracy_mean,balanced_accuracy_sd,mcc_mean,mcc_sd,macro_precision_mean,macro_precision_sd,macro_recall_mean,macro_recall_sd,macro_pr_auc_mean,macro_pr_auc_sd,accuracy_mean,accuracy_sd,predicts
+R4,hgb_multiclass,7150,5,0.338894732386982,0.0,0.3436406057850519,0.0,0.2543876926414678,0.0,0.6300774629192631,0.0,0.3436406057850519,0.0,0.3923950109752544,0.0,0.7998601398601398,0.0,
+R4,lr_multiclass,7150,5,0.33605477935581496,0.0,0.3991768444918482,0.0,0.18591880955334636,0.0,0.32993569415726187,0.0,0.3991768444918482,0.0,0.30983357238880604,0.0,0.5913286713286713,0.0,
+R4,majority_class,7150,1,0.2222222222222222,,0.25,,0.0,,0.2,,0.25,,,,0.8,,NO_EVENT

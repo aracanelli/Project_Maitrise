@@ -1,0 +1,23 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Mining: commits, bulk commits and srcML parse failures per repository (0 = srcML returned a tree, not that it is structurally correct). n = 36086 commits (32588 non-merge) and 0 parse failures over 9 repositories.}
+\label{tab:dq_parse_failures}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrrrrrrrrrrrrrrr}
+\toprule
+repo & n\_commits & n\_non\_merge & n\_bulk & parse\_failures & parse\_failures\_pre & parse\_failures\_post & summary\_n\_merge & summary\_n\_root & summary\_java\_file\_changes & summary\_java\_files\_mined & summary\_file\_changes\_rows & summary\_file\_change\_mismatch\_commits & summary\_blob\_parses & summary\_blob\_cache\_hits & summary\_parse\_seconds & summary\_srcml\_batch\_fallbacks & summary\_commit\_errors & summary\_methods\_changed & summary\_aux\_changes & summary\_events & summary\_workers & summary\_chunk\_size & summary\_elapsed\_seconds & parse\_failure\_reasons \\
+\midrule
+Archer-Game-Template2 & 473 & 464 & 1 & 0 & 0 & 0 & 9 & 1 & 767 & 735 & 767 & 0 & 1025 & 2 & 36.400 & 0 & 0 & 554 & 15 & 107 & 16 & 10 & 6.800 &  \\
+Mindustry & 20299 & 17260 & 26 & 0 & 0 & 0 & 3039 & 1 & 54676 & 54214 & 54676 & 0 & 72048 & 13611 & 9687.600 & 0 & 0 & 53794 & 775 & 2601 & 16 & 150 & 771.700 &  \\
+OpenKeeper & 2780 & 2458 & 7 & 0 & 0 & 0 & 322 & 1 & 8908 & 8908 & 8908 & 0 & 12752 & 809 & 999.100 & 0 & 0 & 9923 & 814 & 843 & 16 & 39 & 96.900 &  \\
+OpenRTS & 477 & 439 & 8 & 0 & 0 & 0 & 38 & 1 & 8596 & 6806 & 8596 & 0 & 6650 & 990 & 216.700 & 0 & 0 & 3790 & 130 & 2313 & 16 & 10 & 54.000 &  \\
+SkyHussars & 439 & 430 & 2 & 0 & 0 & 0 & 9 & 1 & 1491 & 1424 & 1491 & 0 & 2001 & 5 & 64.400 & 0 & 0 & 1253 & 7 & 202 & 16 & 10 & 9.200 &  \\
+jme3rpg & 315 & 295 & 2 & 0 & 0 & 0 & 20 & 1 & 1575 & 1562 & 1575 & 0 & 2091 & 13 & 71.000 & 0 & 0 & 1205 & 3 & 177 & 16 & 10 & 9.900 &  \\
+riiablo & 1951 & 1942 & 5 & 0 & 0 & 0 & 9 & 1 & 6925 & 6292 & 6925 & 0 & 6716 & 117 & 552.200 & 0 & 0 & 5211 & 409 & 4072 & 16 & 31 & 50.500 &  \\
+shattered-pixel-dungeon & 8745 & 8732 & 24 & 0 & 0 & 0 & 13 & 1 & 38297 & 38297 & 38297 & 0 & 58033 & 7777 & 4221.800 & 0 & 0 & 26360 & 291 & 1754 & 16 & 137 & 389.500 &  \\
+subspace-infinity & 607 & 568 & 12 & 0 & 0 & 0 & 39 & 2 & 4741 & 4741 & 4741 & 0 & 6114 & 352 & 248.200 & 0 & 0 & 4946 & 88 & 2026 & 16 & 10 & 40.100 &  \\
+\bottomrule
+\end{tabular}}
+\end{table}

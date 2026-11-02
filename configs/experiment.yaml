@@ -1,0 +1,70 @@
+# Experiment settings, fixed before any run. The posthoc block at the end is the only later addition.
+# Prediction run keys hash the parsed values below, not this text, so comments can change freely.
+# Changing a hashed value (anything in protocol except seeds, a model's entry, the training
+# block for neural and graph models) makes existing predictions stale: run_experiments.py
+# refuses to reuse them until --overwrite.
+tasks: [add_log, remove_log, change_level]   # primary tasks; the add_log_post sensitivity view is run with scripts/run_experiments.py --task add_log_post
+
+sampling:
+  seed: 42
+  ratios: [1, 4, 10]      # negatives per positive, per repo (nested samples)
+  primary_ratio: 4
+
+protocol:
+  scheme: leave_one_repo_out   # documentation only: not read by the code (fixed in src/models/data.py loro_folds), but part of every run key: editing it invalidates the existing predictions
+  min_test_positives: 10
+  low_support_positives: 30
+  val_fraction: 0.15        # grouped by (repo, commit)
+  threshold: f1_on_validation   # documentation only: not read by the code (fixed in src/models/baselines.py f1_threshold), but part of every run key: editing it invalidates the existing predictions
+  seeds: [0, 1, 2, 3, 4]
+
+features:
+  lexical_buckets: 128   # documentation only: fixed in code (src/features/lexical.py N_BUCKETS)
+
+models:
+  lr:  {C: 1.0, max_iter: 3000, class_weight: balanced}
+  rf:  {n_estimators: 500, min_samples_leaf: 2, class_weight: balanced_subsample, n_jobs: 16}
+  # hgb is left unweighted (sklearn default). The F1 threshold picked on validation absorbs the
+  # score shift weighting would cause, and PR-AUC / ROC-AUC only depend on the ranking.
+  hgb: {learning_rate: 0.05, max_iter: 400, max_leaf_nodes: 31, l2_regularization: 1.0, early_stopping: true}
+  mlp:
+    hidden: 128
+    layers: 2
+    dropout: 0.2
+  gnn:
+    hidden: 128
+    layers: 3            # R-GCN layers
+    ggnn_steps: 6        # GGNN propagation steps
+    num_bases: 4         # R-GCN basis decomposition
+    token_dim: 32
+    type_dim: 32
+    dropout: 0.2
+    max_nodes: 2000
+  training:
+    optimizer: adamw            # documentation only: not read by the code (fixed in src/models/train.py train_neural), but part of the run key of the neural and graph models: editing it invalidates their predictions
+    lr: 0.001
+    weight_decay: 0.0001
+    batch_size: 64
+    max_epochs: 60
+    patience: 8
+    early_stop_metric: pr_auc   # documentation only: not read by the code (fixed in src/models/train.py train_neural), but part of the run key of the neural and graph models: editing it invalidates their predictions
+    pos_weight: balanced        # documentation only: not read by the code (fixed in src/models/train.py _run_neural), but part of the run key of the neural and graph models: editing it invalidates their predictions
+
+# Post-hoc variants, reported separately from the pre-specified protocol and never in place of
+# lr / mlp_full / hybrid_ggnn. Each is its base model unchanged, except that every non-binary
+# tabular column (more than 2 distinct values in the fit part of the fold) goes through
+# sign(x) * log1p(|x|) before imputation and scaling. Columns that are already log1p counts
+# (x_ buckets, h_commit_index, h_file_prior_churn) are transformed twice; the prediction
+# sidecars list the transformed columns per fold.
+posthoc:
+  tabular_transform: signed_log1p_nonbinary
+  models: {lr_log1p: lr, mlp_full_log1p: mlp_full, hybrid_ggnn_log1p: hybrid_ggnn}
+  tasks: [add_log, remove_log, change_level]
+
+evaluation:
+  bootstrap_samples: 1000          # descriptive confidence intervals
+  bootstrap_samples_tests: 10000   # paired tests and difference-in-differences
+  bootstrap_cluster: commit   # documentation only: fixed in code (src/evaluation/analysis.py)
+  ci: 0.95                    # documentation only: fixed in code (src/evaluation/stats.py)
+  alpha: 0.05                 # documentation only: no code compares p-values with it (src/evaluation/reporting.py prints them)
+  correction: holm            # documentation only: fixed in code (src/evaluation/analysis.py, stats.holm)

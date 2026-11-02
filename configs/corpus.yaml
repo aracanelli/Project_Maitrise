@@ -1,0 +1,138 @@
+# The 16 screened repositories, each pinned to the head commit used in the report.
+# selection: core | auxiliary | conditional | excluded (screening outcome, report Table 3.2)
+# modeling: true for the nine repositories whose history is mined and modelled
+# remote + head: scripts/setup_corpus.py clones the remote and checks out this commit
+# source: optional local clone to copy from instead of cloning
+
+snapshot_date: "2026-10-01"
+repo_dir: data/raw/repos
+
+repos:
+  - name: OpenKeeper
+    engine: jME
+    size: Large
+    selection: core
+    modeling: true
+    remote: https://github.com/tonihele/OpenKeeper.git
+    source: data/raw/repos/OpenKeeper
+    head: a5d563fd06b85668bd2036e71e4b03ae295887f8
+  - name: Mindustry
+    engine: libGDX
+    size: Large
+    selection: core
+    modeling: true
+    remote: https://github.com/Anuken/Mindustry.git
+    source: data/raw/repos/Mindustry
+    head: b716d7a27b8a50442255f9b49a96c0d57f629ce8
+  - name: shattered-pixel-dungeon
+    engine: libGDX
+    size: Large
+    selection: core
+    modeling: true
+    remote: https://github.com/00-Evan/shattered-pixel-dungeon.git
+    source: data/raw/repos/shattered-pixel-dungeon
+    head: 7b8b845a76fe76c6b7c031ae9e570852411f56db
+  - name: subspace-infinity
+    engine: jME
+    size: Large
+    selection: auxiliary
+    modeling: true
+    remote: https://github.com/assofohdz/subspace-infinity.git
+    source: ../Games/jMonkeyEngine/subspace-infinity
+    head: 9b7dcd8c79bde8054e20d1fc884d1d6e1902b39d
+  - name: riiablo
+    engine: libGDX
+    size: Large
+    selection: auxiliary
+    modeling: true
+    remote: https://github.com/collinsmith/riiablo.git
+    source: ../Games/libGDX/riiablo
+    head: 59aa8d5021c457e8d2891bb23c9e3a0ef724c6b3
+  - name: OpenRTS
+    engine: jME
+    size: Medium
+    selection: auxiliary
+    modeling: true
+    remote: https://github.com/methusalah/OpenRTS.git
+    source: ../Games/jMonkeyEngine/OpenRTS
+    head: 6066640f8ef2fa18b1de3e0dd213e4871b4b8543
+  - name: SkyHussars
+    engine: jME
+    size: Medium
+    selection: auxiliary
+    modeling: true
+    remote: https://github.com/ZoltanTheHun/SkyHussars.git
+    source: ../Games/jMonkeyEngine/SkyHussars
+    head: 270112d3e9a53135a64790bb55adb9b839418e5c
+  - name: Archer-Game-Template2
+    engine: jME
+    size: Medium
+    selection: auxiliary
+    modeling: true
+    remote: https://github.com/capdevon/Archer-Game-Template2.git
+    source: ../Games/jMonkeyEngine/Archer-Game-Template2
+    head: f39a72d7d79fb54b53993ec8665ece2266860908
+  - name: jme3rpg
+    engine: jME
+    size: Medium
+    selection: auxiliary
+    modeling: true
+    remote: https://github.com/Arifolth/jme3rpg.git
+    source: ../Games/jMonkeyEngine/jme3rpg
+    head: 95d9c9ef937db59f22f6be96c60780f82276a09b
+  - name: FXGLGames
+    engine: FXGL
+    size: Medium
+    selection: conditional
+    modeling: false
+    remote: https://github.com/AlmasB/FXGLGames.git
+    source: ../Games/FXGL/FXGLGames
+    head: 2a0e35fce9a51563436b159b78c56f65ac571dcc
+  - name: ToadallyArmed
+    engine: libGDX
+    size: Small
+    selection: conditional
+    modeling: false
+    remote: https://github.com/poneciak57/ToadallyArmed.git
+    source: ../Games/libGDX/ToadallyArmed
+    head: aed8c73da71a801e7560012fc64393d55ee46209
+  - name: FuzeCreek
+    engine: jME
+    size: Medium
+    selection: excluded
+    modeling: false
+    remote: https://github.com/stephengold/FuzeCreek.git
+    source: ../Games/jMonkeyEngine/FuzeCreek
+    head: 6605955b31dd461929777a40eb1211f904edf991
+  - name: monkeyzone
+    engine: jME
+    size: Medium
+    selection: excluded
+    modeling: false
+    remote: https://github.com/jMonkeyEngine/monkeyzone.git
+    source: ../Games/jMonkeyEngine/monkeyzone
+    head: 29e82fe993bdd8444f9cff0d26109d9c5577b224
+  - name: BrickBreakerNew
+    engine: libGDX
+    size: Small
+    selection: excluded
+    modeling: false
+    remote: https://github.com/jthecoder12/BrickBreakerNew.git
+    source: ../Games/libGDX/BrickBreakerNew
+    head: 40aa0b512da8ac96a75c65e2f5404f68bcf027af
+  - name: pass-to-survive
+    engine: libGDX
+    size: Small
+    selection: excluded
+    modeling: false
+    remote: https://github.com/adiyat-abubakirov/pass-to-survive.git
+    source: ../Games/libGDX/pass-to-survive
+    head: 9a5875e101dc3ae2e4d9ecb7e66f83604c6dee48
+  - name: TheLastGarage
+    engine: libGDX
+    size: Small
+    selection: excluded
+    modeling: false
+    remote: https://github.com/HopeLAB-dev/TheLastGarage.git
+    source: ../Games/libGDX/TheLastGarage
+    head: 252399e51903b61c3217a82afdb375f7001c7ed6

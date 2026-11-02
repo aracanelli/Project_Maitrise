@@ -1,0 +1,32 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Imbalance handling per task and model: negative sampling, class weighting and decision-threshold rule (prediction sidecars). n = 18 rows.}
+\label{tab:dq_imbalance_R10}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllrlrlrrr}
+\toprule
+setting & task & model & negative\_sampling & class\_weighting & pos\_weight\_mean & threshold\_rule & threshold\_mean & threshold\_min & threshold\_max \\
+\midrule
+R10 & add\_log & naive\_prior & 10 negatives per positive per repository (seeded, nested) & none (no training) & -- & score < threshold (training prevalence) & 0.090 & 0.090 & 0.091 \\
+R10 & add\_log & naive\_size & 10 negatives per positive per repository (seeded, nested) & none (no training) & -- & score >= threshold (F1-max on validation) & 10.500 & 2.000 & 21.000 \\
+R10 & add\_log & naive\_rule & 10 negatives per positive per repository (seeded, nested) & none (no training) & -- & score >= threshold (F1-max on validation) & 0.012 & 0.002 & 0.021 \\
+R10 & add\_log & lr & 10 negatives per positive per repository (seeded, nested) & class\_weight=balanced & -- & score >= threshold (F1-max on validation) & 0.719 & 0.612 & 0.838 \\
+R10 & add\_log & rf & 10 negatives per positive per repository (seeded, nested) & class\_weight=balanced\_subsample & -- & score >= threshold (F1-max on validation) & 0.226 & 0.129 & 0.318 \\
+R10 & add\_log & hgb & 10 negatives per positive per repository (seeded, nested) & none (unweighted loss) & -- & score >= threshold (F1-max on validation) & 0.171 & 0.120 & 0.289 \\
+R10 & remove\_log & naive\_prior & 10 negatives per positive per repository (seeded, nested) & none (no training) & -- & score < threshold (training prevalence) & 0.102 & 0.098 & 0.110 \\
+R10 & remove\_log & naive\_size & 10 negatives per positive per repository (seeded, nested) & none (no training) & -- & score >= threshold (F1-max on validation) & 48.143 & 3.000 & 245.000 \\
+R10 & remove\_log & naive\_rule & 10 negatives per positive per repository (seeded, nested) & none (no training) & -- & score >= threshold (F1-max on validation) & 0.809 & 0.003 & 3.018 \\
+R10 & remove\_log & lr & 10 negatives per positive per repository (seeded, nested) & class\_weight=balanced & -- & score >= threshold (F1-max on validation) & 0.547 & 0.048 & 0.838 \\
+R10 & remove\_log & rf & 10 negatives per positive per repository (seeded, nested) & class\_weight=balanced\_subsample & -- & score >= threshold (F1-max on validation) & 0.137 & 0.080 & 0.238 \\
+R10 & remove\_log & hgb & 10 negatives per positive per repository (seeded, nested) & none (unweighted loss) & -- & score >= threshold (F1-max on validation) & 0.139 & 0.080 & 0.235 \\
+R10 & change\_level & naive\_prior & 10 negatives per positive per repository (seeded, nested) & none (no training) & -- & score < threshold (training prevalence) & 0.077 & 0.059 & 0.091 \\
+R10 & change\_level & naive\_size & 10 negatives per positive per repository (seeded, nested) & none (no training) & -- & score >= threshold (F1-max on validation) & 4.250 & 4.000 & 5.000 \\
+R10 & change\_level & naive\_rule & 10 negatives per positive per repository (seeded, nested) & none (no training) & -- & score >= threshold (F1-max on validation) & 1.200 & 0.000 & 3.167 \\
+R10 & change\_level & lr & 10 negatives per positive per repository (seeded, nested) & class\_weight=balanced & -- & score >= threshold (F1-max on validation) & 0.238 & 0.000 & 0.884 \\
+R10 & change\_level & rf & 10 negatives per positive per repository (seeded, nested) & class\_weight=balanced\_subsample & -- & score >= threshold (F1-max on validation) & 0.081 & 0.020 & 0.231 \\
+R10 & change\_level & hgb & 10 negatives per positive per repository (seeded, nested) & none (unweighted loss) & -- & score >= threshold (F1-max on validation) & 0.075 & 0.036 & 0.117 \\
+\bottomrule
+\end{tabular}}
+\end{table}

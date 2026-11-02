@@ -1,0 +1,61 @@
+% requires \usepackage{booktabs} and \usepackage{longtable}
+{\scriptsize
+\begin{longtable}{llllrrrrl}
+\caption{Top-15 single features by permutation importance (drop in average precision), mean $\pm$ sd over folds; x\_ buckets belong to the lexical group; n\_folds per row. 1 model(s), 3 task(s).}\label{tab:rq2_importance_features}\\
+\toprule
+setting & task & model & feature & importance\_mean & importance\_sd & n\_folds & rank & group\_name \\
+\midrule
+\endfirsthead
+\toprule
+setting & task & model & feature & importance\_mean & importance\_sd & n\_folds & rank & group\_name \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+R4 & add\_log & hgb & f\_log\_density & 0.070 & 0.072 & 6 & 1 & file \\
+R4 & add\_log & hgb & h\_method\_prior\_log\_events & 0.047 & 0.052 & 6 & 2 & history \\
+R4 & add\_log & hgb & l\_log\_density & 0.027 & 0.058 & 6 & 3 & logging context \\
+R4 & add\_log & hgb & h\_repo\_prior\_log\_event\_rate & 0.026 & 0.048 & 6 & 4 & history \\
+R4 & add\_log & hgb & x\_076 & 0.010 & 0.008 & 6 & 5 & lexical \\
+R4 & add\_log & hgb & h\_author\_prior\_log\_events & 0.007 & 0.007 & 6 & 6 & history \\
+R4 & add\_log & hgb & m\_n\_statements & 0.006 & 0.013 & 6 & 7 & method \\
+R4 & add\_log & hgb & h\_file\_prior\_log\_events & 0.005 & 0.010 & 6 & 8 & history \\
+R4 & add\_log & hgb & m\_n\_try & 0.004 & 0.015 & 6 & 9 & method \\
+R4 & add\_log & hgb & l\_mean\_level\_ord & 0.004 & 0.009 & 6 & 10 & logging context \\
+R4 & add\_log & hgb & m\_return\_void & 0.003 & 0.007 & 6 & 11 & method \\
+R4 & add\_log & hgb & x\_041 & 0.003 & 0.007 & 6 & 12 & lexical \\
+R4 & add\_log & hgb & h\_file\_prior\_commits & 0.003 & 0.006 & 6 & 13 & history \\
+R4 & add\_log & hgb & h\_days\_since\_file\_change & 0.002 & 0.011 & 6 & 14 & history \\
+R4 & add\_log & hgb & f\_n\_imports & 0.002 & 0.010 & 6 & 15 & file \\
+R4 & change\_level & hgb & m\_loc & 0.026 & 0.040 & 4 & 1 & method \\
+R4 & change\_level & hgb & x\_122 & 0.025 & 0.051 & 4 & 2 & lexical \\
+R4 & change\_level & hgb & h\_author\_prior\_commits & 0.021 & 0.030 & 4 & 3 & history \\
+R4 & change\_level & hgb & l\_log\_density & 0.018 & 0.031 & 4 & 4 & logging context \\
+R4 & change\_level & hgb & m\_n\_statements & 0.017 & 0.033 & 4 & 5 & method \\
+R4 & change\_level & hgb & h\_author\_prior\_log\_events & 0.017 & 0.022 & 4 & 6 & history \\
+R4 & change\_level & hgb & m\_n\_conditionals & 0.016 & 0.032 & 4 & 7 & method \\
+R4 & change\_level & hgb & m\_n\_if & 0.011 & 0.023 & 4 & 8 & method \\
+R4 & change\_level & hgb & l\_mean\_level\_ord & 0.010 & 0.020 & 4 & 9 & logging context \\
+R4 & change\_level & hgb & f\_n\_formal\_logs & 0.010 & 0.019 & 4 & 10 & file \\
+R4 & change\_level & hgb & f\_n\_imports & 0.009 & 0.018 & 4 & 11 & file \\
+R4 & change\_level & hgb & f\_dominant\_level\_TRACE & 0.008 & 0.017 & 4 & 12 & file \\
+R4 & change\_level & hgb & s\_rel\_position & 0.005 & 0.007 & 4 & 13 & statement \\
+R4 & change\_level & hgb & h\_repo\_prior\_log\_event\_rate & 0.004 & 0.008 & 4 & 14 & history \\
+R4 & change\_level & hgb & s\_level\_eq\_file\_dominant & 0.003 & 0.006 & 4 & 15 & statement \\
+R4 & remove\_log & hgb & h\_author\_prior\_commits & 0.016 & 0.023 & 7 & 1 & history \\
+R4 & remove\_log & hgb & l\_log\_density & 0.011 & 0.011 & 7 & 2 & logging context \\
+R4 & remove\_log & hgb & x\_028 & 0.010 & 0.016 & 7 & 3 & lexical \\
+R4 & remove\_log & hgb & f\_log\_density & 0.009 & 0.012 & 7 & 4 & file \\
+R4 & remove\_log & hgb & m\_n\_calls & 0.007 & 0.011 & 7 & 5 & method \\
+R4 & remove\_log & hgb & s\_level\_INFO & 0.007 & 0.012 & 7 & 6 & statement \\
+R4 & remove\_log & hgb & x\_038 & 0.005 & 0.014 & 7 & 7 & lexical \\
+R4 & remove\_log & hgb & l\_dominant\_level\_INFO & 0.005 & 0.013 & 7 & 8 & logging context \\
+R4 & remove\_log & hgb & x\_102 & 0.004 & 0.008 & 7 & 9 & lexical \\
+R4 & remove\_log & hgb & x\_016 & 0.004 & 0.008 & 7 & 10 & lexical \\
+R4 & remove\_log & hgb & x\_018 & 0.004 & 0.007 & 7 & 11 & lexical \\
+R4 & remove\_log & hgb & s\_depth & 0.003 & 0.007 & 7 & 12 & statement \\
+R4 & remove\_log & hgb & x\_124 & 0.003 & 0.007 & 7 & 13 & lexical \\
+R4 & remove\_log & hgb & x\_055 & 0.003 & 0.010 & 7 & 14 & lexical \\
+R4 & remove\_log & hgb & x\_035 & 0.003 & 0.004 & 7 & 15 & lexical \\
+\end{longtable}
+}

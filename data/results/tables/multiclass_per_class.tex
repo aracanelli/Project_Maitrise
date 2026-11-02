@@ -1,0 +1,21 @@
+% requires \usepackage{booktabs}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Multiclass supplement (NO\_EVENT/ADD\_LOG/REMOVE\_LOG/CHANGE\_LEVEL), pooled over LORO folds; mean $\pm$ sd over seeds; balanced accuracy = macro recall; majority\_class = always the most frequent class; n = instances (n\_class per class).}
+\label{tab:multiclass_per_class}
+\begin{tabular}{lllrrrrr}
+\toprule
+setting & model & class & n\_class & f1\_mean & f1\_sd & pr\_auc\_mean & pr\_auc\_sd \\
+\midrule
+R4 & hgb\_multiclass & NO\_EVENT & 5720 & 0.895 & 0.000 & 0.921 & 0.000 \\
+R4 & hgb\_multiclass & ADD\_LOG & 857 & 0.061 & 0.000 & 0.200 & 0.000 \\
+R4 & hgb\_multiclass & REMOVE\_LOG & 493 & 0.375 & 0.000 & 0.363 & 0.000 \\
+R4 & hgb\_multiclass & CHANGE\_LEVEL & 80 & 0.025 & 0.000 & 0.086 & 0.000 \\
+R4 & lr\_multiclass & NO\_EVENT & 5720 & 0.745 & 0.000 & 0.867 & 0.000 \\
+R4 & lr\_multiclass & ADD\_LOG & 857 & 0.204 & 0.000 & 0.143 & 0.000 \\
+R4 & lr\_multiclass & REMOVE\_LOG & 493 & 0.345 & 0.000 & 0.200 & 0.000 \\
+R4 & lr\_multiclass & CHANGE\_LEVEL & 80 & 0.050 & 0.000 & 0.029 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}

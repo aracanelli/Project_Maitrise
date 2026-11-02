@@ -1,0 +1,23 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{POST-HOC models: training runs from the seed<k>.json sidecars, with the log1p-transformed columns per fold (mean over folds and seeds, per group; n\_log1p\_twice\_mean = columns that are already log1p counts: x\_ buckets, h\_commit\_index, h\_file\_prior\_churn). n\_eval = evaluated instances and n\_selected = instances of the setting, per model.}
+\label{tab:posthoc_log1p_training}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllrlrlrrrrrrrrrrlrlrr}
+\toprule
+setting & task & model & n\_seeds & eval\_set\_sha1 & code\_sha1 & all\_complete & n\_folds\_total & n\_eval & n\_selected & dropped\_no\_features & dropped\_no\_graph & fold\_seconds\_mean & seconds\_per\_seed & epochs\_mean & threshold\_mean & val\_pr\_auc\_mean & tabular\_transform & n\_log1p\_columns\_mean & log1p\_columns\_by\_group & n\_log1p\_twice\_mean & n\_folds\_log1p \\
+\midrule
+R4 & add\_log & hybrid\_ggnn\_log1p & 5 & 8721ef328e59493d588fef99e954b0108860a75a & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 30 & 4535 & 4535 & 0 & 0 & 1716.692 & 10300.154 & 11.467 & 0.655 & 0.560 & signed\_log1p\_nonbinary & 175.833 & h=11; f=9; m=19.8; l=7; d=1; x=128 & 130.000 & 30 \\
+R4 & add\_log & lr\_log1p & 5 & 8721ef328e59493d588fef99e954b0108860a75a & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 30 & 4535 & 4535 & 0 & 0 & 0.262 & 1.574 & -- & 0.582 & 0.503 & signed\_log1p\_nonbinary & 175.833 & h=11; f=9; m=19.8; l=7; d=1; x=128 & 130.000 & 30 \\
+R4 & add\_log & mlp\_full\_log1p & 5 & 8721ef328e59493d588fef99e954b0108860a75a & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 30 & 4535 & 4535 & 0 & 0 & 3.865 & 23.190 & 11.033 & 0.622 & 0.563 & signed\_log1p\_nonbinary & 175.833 & h=11; f=9; m=19.8; l=7; d=1; x=128 & 130.000 & 30 \\
+R4 & remove\_log & hybrid\_ggnn\_log1p & 5 & 00aa19cf5a9db5d2ecd825012e203c6649299b26 & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 35 & 3772 & 3772 & 0 & 0 & 631.508 & 4420.554 & 14.086 & 0.517 & 0.452 & signed\_log1p\_nonbinary & 184.857 & h=11; f=9; m=19.9; l=7; s=9; d=1; x=128 & 130.000 & 35 \\
+R4 & remove\_log & lr\_log1p & 5 & 00aa19cf5a9db5d2ecd825012e203c6649299b26 & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 35 & 3772 & 3772 & 0 & 0 & 0.205 & 1.438 & -- & 0.333 & 0.357 & signed\_log1p\_nonbinary & 184.857 & h=11; f=9; m=19.9; l=7; s=9; d=1; x=128 & 130.000 & 35 \\
+R4 & remove\_log & mlp\_full\_log1p & 5 & 00aa19cf5a9db5d2ecd825012e203c6649299b26 & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 35 & 3772 & 3772 & 0 & 0 & 4.428 & 30.994 & 14.714 & 0.475 & 0.453 & signed\_log1p\_nonbinary & 184.857 & h=11; f=9; m=19.9; l=7; s=9; d=1; x=128 & 130.000 & 35 \\
+R4 & change\_level & hybrid\_ggnn\_log1p & 5 & dad6426d734baba08abb08bd95863f8233c5ef8c & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 20 & 595 & 595 & 0 & 0 & 540.875 & 2163.502 & 18.600 & 0.291 & 0.539 & signed\_log1p\_nonbinary & 184.750 & h=11; f=9; m=19.8; l=7; s=9; d=1; x=128 & 130.000 & 20 \\
+R4 & change\_level & lr\_log1p & 5 & dad6426d734baba08abb08bd95863f8233c5ef8c & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 20 & 595 & 595 & 0 & 0 & 0.037 & 0.148 & -- & 0.009 & 0.359 & signed\_log1p\_nonbinary & 184.750 & h=11; f=9; m=19.8; l=7; s=9; d=1; x=128 & 130.000 & 20 \\
+R4 & change\_level & mlp\_full\_log1p & 5 & dad6426d734baba08abb08bd95863f8233c5ef8c & 17cda31f1809a54e15f9a3e050d65546232234f6 & yes & 20 & 595 & 595 & 0 & 0 & 1.549 & 6.198 & 15.550 & 0.403 & 0.427 & signed\_log1p\_nonbinary & 184.750 & h=11; f=9; m=19.8; l=7; s=9; d=1; x=128 & 130.000 & 20 \\
+\bottomrule
+\end{tabular}}
+\end{table}

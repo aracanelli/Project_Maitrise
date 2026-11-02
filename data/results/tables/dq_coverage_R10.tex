@@ -1,0 +1,32 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Prediction coverage per model (n\_evaluated of n\_union predicted instances). n\_union = instances predicted by any model, n\_evaluated = instances scored for the model.}
+\label{tab:dq_coverage_R10}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllrrrrrrl}
+\toprule
+setting & task & model & n\_seeds & seeds & n\_union & n\_evaluated & partial & eval\_set\_mismatch & eval\_set\_sha1 \\
+\midrule
+R10 & add\_log & naive\_prior & 5 & 0,1,2,3,4 & 9845 & 9845 &  &  & 5c0ceb717b450e73e89563b7842e7666839a19c8 \\
+R10 & add\_log & naive\_size & 5 & 0,1,2,3,4 & 9845 & 9845 &  &  & 5c0ceb717b450e73e89563b7842e7666839a19c8 \\
+R10 & add\_log & naive\_rule & 5 & 0,1,2,3,4 & 9845 & 9845 &  &  & 5c0ceb717b450e73e89563b7842e7666839a19c8 \\
+R10 & add\_log & lr & 5 & 0,1,2,3,4 & 9845 & 9845 &  &  & 5c0ceb717b450e73e89563b7842e7666839a19c8 \\
+R10 & add\_log & rf & 5 & 0,1,2,3,4 & 9845 & 9845 &  &  & 5c0ceb717b450e73e89563b7842e7666839a19c8 \\
+R10 & add\_log & hgb & 5 & 0,1,2,3,4 & 9845 & 9845 &  &  & 5c0ceb717b450e73e89563b7842e7666839a19c8 \\
+R10 & remove\_log & naive\_prior & 5 & 0,1,2,3,4 & 7566 & 7566 &  &  & cce83475293f643af0ecf927d0a4d6ad5d9009f8 \\
+R10 & remove\_log & naive\_size & 5 & 0,1,2,3,4 & 7566 & 7566 &  &  & cce83475293f643af0ecf927d0a4d6ad5d9009f8 \\
+R10 & remove\_log & naive\_rule & 5 & 0,1,2,3,4 & 7566 & 7566 &  &  & cce83475293f643af0ecf927d0a4d6ad5d9009f8 \\
+R10 & remove\_log & lr & 5 & 0,1,2,3,4 & 7566 & 7566 &  &  & cce83475293f643af0ecf927d0a4d6ad5d9009f8 \\
+R10 & remove\_log & rf & 5 & 0,1,2,3,4 & 7566 & 7566 &  &  & cce83475293f643af0ecf927d0a4d6ad5d9009f8 \\
+R10 & remove\_log & hgb & 5 & 0,1,2,3,4 & 7566 & 7566 &  &  & cce83475293f643af0ecf927d0a4d6ad5d9009f8 \\
+R10 & change\_level & naive\_prior & 5 & 0,1,2,3,4 & 1287 & 1287 &  &  & 1e61a45e89990394eb4ea983a3847b10afe08f92 \\
+R10 & change\_level & naive\_size & 5 & 0,1,2,3,4 & 1287 & 1287 &  &  & 1e61a45e89990394eb4ea983a3847b10afe08f92 \\
+R10 & change\_level & naive\_rule & 5 & 0,1,2,3,4 & 1287 & 1287 &  &  & 1e61a45e89990394eb4ea983a3847b10afe08f92 \\
+R10 & change\_level & lr & 5 & 0,1,2,3,4 & 1287 & 1287 &  &  & 1e61a45e89990394eb4ea983a3847b10afe08f92 \\
+R10 & change\_level & rf & 5 & 0,1,2,3,4 & 1287 & 1287 &  &  & 1e61a45e89990394eb4ea983a3847b10afe08f92 \\
+R10 & change\_level & hgb & 5 & 0,1,2,3,4 & 1287 & 1287 &  &  & 1e61a45e89990394eb4ea983a3847b10afe08f92 \\
+\bottomrule
+\end{tabular}}
+\end{table}

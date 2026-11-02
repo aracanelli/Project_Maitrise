@@ -1,0 +1,4 @@
+task,n_graphs,n_nodes_mean,n_nodes_median,n_nodes_p95,n_nodes_max,n_edges_mean,n_edges_median,n_edges_p95,n_edges_max,n_truncated,build_n_candidates,build_n_instances,build_n_graphs,build_n_failures,build_elapsed_seconds,build_n_pos,build_nodes_before_truncation_max,build_truncated,build_failures,build_failure_reasons,n_node_types,n_edge_types
+add_log,4535,106.16868798235943,39.0,345.2000000000007,2000.0,403.7393605292172,144.0,1458.6000000000004,8072.0,55,4535,4535,4535,0,47.8,907,7913,55,0,,32,14
+remove_log,3772,157.30275715800636,96.0,470.4499999999998,1233.0,668.8234358430541,394.0,2184.0,5744.0,0,3772,3772,3772,0,31.5,767,1233,0,0,,32,14
+change_level,595,166.76302521008404,82.0,535.0,1231.0,741.818487394958,346.0,2381.5999999999995,5744.0,0,595,595,595,0,8.4,119,1231,0,0,,32,14

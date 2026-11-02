@@ -1,0 +1,29 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Context category of positives vs negatives (R4 instances); enrichment = share\_pos / share\_neg. n per task: add\_log 907 positives, 3628 negatives; change\_level 119 positives, 476 negatives; remove\_log 767 positives, 3005 negatives.}
+\label{tab:rq1_enrichment}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllrrrrrrr}
+\toprule
+setting & task & category & n\_pos & share\_pos & n\_neg & share\_neg & enrichment & total\_pos & total\_neg \\
+\midrule
+R4 & add\_log & frame\_update & 94 & 0.104 & 591 & 0.163 & 0.636 & 907 & 3628 \\
+R4 & add\_log & loop & 325 & 0.358 & 936 & 0.258 & 1.389 & 907 & 3628 \\
+R4 & add\_log & subsystem & 263 & 0.290 & 776 & 0.214 & 1.356 & 907 & 3628 \\
+R4 & add\_log & general & 225 & 0.248 & 1325 & 0.365 & 0.679 & 907 & 3628 \\
+R4 & add\_log & perf\_sensitive\_any & 682 & 0.752 & 2303 & 0.635 & 1.185 & 907 & 3628 \\
+R4 & remove\_log & frame\_update & 113 & 0.147 & 206 & 0.069 & 2.149 & 767 & 3005 \\
+R4 & remove\_log & loop & 309 & 0.403 & 1567 & 0.521 & 0.773 & 767 & 3005 \\
+R4 & remove\_log & subsystem & 214 & 0.279 & 806 & 0.268 & 1.040 & 767 & 3005 \\
+R4 & remove\_log & general & 131 & 0.171 & 426 & 0.142 & 1.205 & 767 & 3005 \\
+R4 & remove\_log & perf\_sensitive\_any & 636 & 0.829 & 2579 & 0.858 & 0.966 & 767 & 3005 \\
+R4 & change\_level & frame\_update & 4 & 0.034 & 28 & 0.059 & 0.571 & 119 & 476 \\
+R4 & change\_level & loop & 50 & 0.420 & 256 & 0.538 & 0.781 & 119 & 476 \\
+R4 & change\_level & subsystem & 47 & 0.395 & 123 & 0.258 & 1.528 & 119 & 476 \\
+R4 & change\_level & general & 18 & 0.151 & 69 & 0.145 & 1.043 & 119 & 476 \\
+R4 & change\_level & perf\_sensitive\_any & 101 & 0.849 & 407 & 0.855 & 0.993 & 119 & 476 \\
+\bottomrule
+\end{tabular}}
+\end{table}

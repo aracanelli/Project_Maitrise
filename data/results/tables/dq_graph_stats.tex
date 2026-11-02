@@ -1,0 +1,17 @@
+% requires \usepackage{booktabs} and \usepackage{graphicx}
+\begin{table}[htbp]
+\centering
+\small
+\caption{Graph size statistics per task (n\_graphs graphs). n = 8902 graphs.}
+\label{tab:dq_graph_stats}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrrrrrrrrrrrrr}
+\toprule
+task & n\_graphs & n\_nodes\_mean & n\_nodes\_median & n\_nodes\_p95 & n\_nodes\_max & n\_edges\_mean & n\_edges\_median & n\_edges\_p95 & n\_edges\_max & n\_truncated & build\_n\_candidates & build\_n\_instances & build\_n\_graphs & build\_n\_failures & build\_elapsed\_seconds & build\_n\_pos & build\_nodes\_before\_truncation\_max & build\_truncated & build\_failures & build\_failure\_reasons & n\_node\_types & n\_edge\_types \\
+\midrule
+add\_log & 4535 & 106.169 & 39.000 & 345.200 & 2000.000 & 403.739 & 144.000 & 1458.600 & 8072.000 & 55 & 4535 & 4535 & 4535 & 0 & 47.800 & 907 & 7913 & 55 & 0 &  & 32 & 14 \\
+remove\_log & 3772 & 157.303 & 96.000 & 470.450 & 1233.000 & 668.823 & 394.000 & 2184.000 & 5744.000 & 0 & 3772 & 3772 & 3772 & 0 & 31.500 & 767 & 1233 & 0 & 0 &  & 32 & 14 \\
+change\_level & 595 & 166.763 & 82.000 & 535.000 & 1231.000 & 741.818 & 346.000 & 2381.600 & 5744.000 & 0 & 595 & 595 & 595 & 0 & 8.400 & 119 & 1231 & 0 & 0 &  & 32 & 14 \\
+\bottomrule
+\end{tabular}}
+\end{table}

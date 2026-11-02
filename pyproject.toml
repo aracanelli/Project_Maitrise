@@ -1,0 +1,30 @@
+[project]
+name = "game-logging-gnn"
+version = "1.0.0"
+description = "Learning logging decisions in Java game repositories from Git history, with classical models and GNNs (ÉTS master's project)."
+license = {text = "MIT"}
+authors = [{name = "Anthony Racanelli"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "lxml",
+    "gitpython",
+    "python-Levenshtein",
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "pyyaml",
+    "matplotlib",
+    "openpyxl",
+    "threadpoolctl",
+    "torch>=2.6",
+    "torch_geometric>=2.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
